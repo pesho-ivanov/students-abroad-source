@@ -100,10 +100,15 @@ a:hover {
   line-height: 20px;
 }
 
+#banner {
+  position:relative;
+  top:-20px;
+}
+
 #author-info {
 }
 
-#author-info ul {
+#main #author-info ul li {
   list-style-type: none;
 }
 

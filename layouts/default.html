@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Къде учат съмишлениците ми? – <%= @item[:title] %>  </title>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+  </head>
+  <body>
+    <div id="main">
+      <%=  
+        if @item.identifier != '/' && @item.parent.identifier == '/blogs/'
+          render 'author'
+        end %>
+
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <h2>За проекта</h2>
+      <ul>
+        <li><a href="/about/">Кои сме ние</a></li>
+        <li><a href="/contact/">Връзка с нас</a></li>
+      </ul>
+      <h2>Разказвачи</h2>
+      <ul>
+        <% @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog| %>
+          <li><a href= <%= blog.identifier %> ><%= blog[:title].split(' ')[0] + ' (' + blog[:country] + ')' %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>

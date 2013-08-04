@@ -1,0 +1,12 @@
+<div id="author-info">
+  <h2>
+    <a href="<%= @item[:link] %>"><%= @item[:title] %></a>
+  </h2>
+
+  <ul>
+    <li><%= @item[:subject] %></li>
+    <li><%= @item[:university] %>, <%= @item[:country] %></li>
+    <li><%= @item[:period] %></li>
+    <li><a href="<%= @item[:email] %>"><%= @item[:email] %></a></li>
+  </ul>
+</div>

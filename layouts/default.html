@@ -5,6 +5,8 @@
     <title>Къде учат съмишлениците ми? – <%= @item[:title] %>  </title>
     <link rel="stylesheet" href="/style.css">
 
+    <link rel="icon" href="./favicon.ico" />
+
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
   </head>
@@ -18,6 +20,9 @@
       <%= yield %>
     </div>
     <div id="sidebar">
+      <div id="banner">
+        <a href="/"><img src="/banner.png" alt="Начална страница"/></a>
+      </div>
       <h2>За проекта</h2>
       <ul>
         <li><a href="/about/">Кои сме ние</a></li>

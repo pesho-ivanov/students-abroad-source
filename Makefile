@@ -13,4 +13,8 @@ secure_copy:
 	if [ -d "$(SITE_PATH)/.git" ]; then $(MAKE) copy_commit_push ; \
 	else echo "Incorrect site directory: " $(SITE_PATH) "(no .git/ there)" ; fi
 
+view:
+	nanoc view
+
 publish: compile secure_copy
+run: compile view

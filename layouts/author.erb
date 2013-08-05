@@ -1,12 +1,11 @@
 <div id="author-info">
-  <h2>
-    <a href="<%= @item[:link] %>"><%= @item[:title] %></a>
-  </h2>
+  <div id="name"><a href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
+  <div id="email">(<%= obfuscate_email(@item[:email]) %>)</div>
 
   <ul>
     <li><%= @item[:subject] %></li>
-    <li><%= @item[:university] %>, <%= @item[:country] %></li>
+    <li><%= @item[:university] %></li>
+    <li><%= @item[:country] %></li>
     <li><%= @item[:period] %></li>
-    <li><a href="<%= @item[:email] %>"><%= @item[:email] %></a></li>
   </ul>
 </div>

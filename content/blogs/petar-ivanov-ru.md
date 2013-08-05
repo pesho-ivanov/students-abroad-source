@@ -7,5 +7,3 @@ subject:    Приложна математика и информатика
 period:     2009--2014
 email:      peter.ivanov89@gmail.com
 ---
-
-:")

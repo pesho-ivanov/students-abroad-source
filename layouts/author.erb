@@ -1,3 +1,9 @@
+<%  img_filename = "/photos/" + stripped_filename(@item) + ".jpg"
+    if File.exist?("content" + img_filename)
+%>
+      <img id="author-photo" src="<%= img_filename %>" alt="<%= @item[:title] %>"/>
+<% end %>
+
 <div id="author-info">
   <div id="name"><a href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
   <div id="email">(<%= obfuscate_email(@item[:email]) %>)</div>
@@ -6,6 +12,7 @@
     <li><%= @item[:subject] %></li>
     <li><%= @item[:university] %></li>
     <li><%= @item[:country] %></li>
-    <li><%= @item[:period] %></li>
+    <% if @item[:period] %> <li><%= @item[:period] %></li> <% end %>
   </ul>
+  <div id="blog"><a href="<%= @item[:link] %>">Блог</a></div>
 </div>

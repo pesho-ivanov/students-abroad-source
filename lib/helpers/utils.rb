@@ -10,4 +10,9 @@ module Utils
     AssertionError.assert{ orig_email.length < obf_email.length }    
     return orig_email[0..2] + '<div id="antispam">answer42.195@runforever.com</div>' + orig_email[3..-1]
   end
+
+  def stripped_filename(item)
+    %r".*/(?<stripped_filename>[^/.]+)" =~ item[:filename]
+    return stripped_filename
+  end
 end

@@ -5,5 +5,5 @@ link:       http://leicesterbg.blogspot.com/
 university: Лестър
 subject:    Общо инженерство
 period:     
-email:      hartrox@gmail.com
+email:      har.alabala.trox@gmail.com
 ---

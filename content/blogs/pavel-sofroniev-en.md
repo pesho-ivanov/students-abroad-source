@@ -5,5 +5,5 @@ link:       http://pavelsof.blogspot.com/
 university: Плимут
 subject:    Морски бизнес
 period:     
-email:      pavelsof@gmail.com
+email:      pav.alabala.elsof@gmail.com
 ---

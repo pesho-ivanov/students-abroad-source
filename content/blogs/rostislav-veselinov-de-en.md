@@ -5,5 +5,5 @@ link:       http://germanyanduk.blogspot.com/
 university: Duisburg-Essen
 subject:    Медицинска биология
 period:     
-email:      rostislavveselinov@gmail.com
+email:      ros.alabala.tislavveselinov@gmail.com
 ---

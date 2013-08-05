@@ -5,5 +5,5 @@ link:       http://luxminiblog.wordpress.com/
 university: Люксембургски университет
 subject:    Компютърни науки
 period:     
-email:      alex.kovacheva@gmail.com 
+email:      ale.alabala.x.kovacheva@gmail.com 
 ---

@@ -5,5 +5,5 @@ link:       http://diana-oxford.blogspot.com/
 university: Оксфорд
 subject:    Физика и философия
 period:     
-email:      diana.sofronieva@gmail.com
+email:      dia.alabala.na.sofronieva@gmail.com
 ---

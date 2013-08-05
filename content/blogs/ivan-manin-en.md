@@ -5,5 +5,5 @@ link:       http://bulgarianlancs.blogspot.com/
 university: Ланкастър
 subject:    Икономика и финанси
 period:     
-email:      ivan.manin@gmail.com
+email:      iva.alabala.n.manin@gmail.com
 ---

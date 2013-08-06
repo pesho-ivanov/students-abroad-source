@@ -24,27 +24,21 @@ a:hover {
 
 #main {
   position: absolute;
-
   top: 40px;
   left: 280px;
-
   width: 500px;
 }
 
 #main h1 {
   font-size: 40px;
   font-weight: normal;
-
   line-height: 40px;
-
   letter-spacing: -1px;
 }
 
 #main p {
   margin: 20px 0;
-
   font-size: 15px;
-
   line-height: 20px;
 }
 
@@ -54,7 +48,6 @@ a:hover {
 
 #main li {
   font-size: 15px;
-
   line-height: 20px;
 }
 
@@ -64,40 +57,30 @@ a:hover {
 
 #sidebar {
   position: absolute;
-
   top: 40px;
   left: 20px;
   width: 200px;
-
   padding: 20px 20px 0 0;
-
   border-right: 1px solid #ccc;
-
   text-align: right;
 }
 
 #sidebar h2 {
   text-transform: uppercase;
-
-  font-size: 13px;
-
+  font-size: 16px;
   color: #333;
-
   letter-spacing: 1px;
-
-  line-height: 10px;
+  line-height: 13px;
 }
 
 #sidebar ul {
   list-style-type: none;
-
   margin: 20px 0;
 }
 
 #sidebar li {
-  font-size: 14px;
-
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 23px;
 }
 
 #sidebar #banner {
@@ -123,7 +106,7 @@ a:hover {
 
 #main #author-info ul li {
   list-style-type: none;
-  font-style: italic;
+  #font-style: italic;
   left: 10px;
 }
 
@@ -134,14 +117,14 @@ a:hover {
 }
 
 #main #author-info #email {
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
   #padding-left: 10px
 }
 
 #main #author-info #blog {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: underline;
   left: 30px;
 }

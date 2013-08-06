@@ -88,6 +88,11 @@ a:hover {
   top: -15px;
 }
 
+#about-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 #main #author-photo {
   position: relative;
   #display: block;
@@ -119,6 +124,7 @@ a:hover {
 #main #author-info #email {
   font-size: 14px;
   color: #333;
+  font-style: italic;
   #padding-left: 10px
 }
 

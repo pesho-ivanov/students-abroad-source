@@ -6,7 +6,7 @@
 
 <div id="author-info">
   <div id="name"><a href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
-  <div id="email">(<%= obfuscate_email(@item[:email]) %>)</div>
+  <div id="email"><%= obfuscate_email(@item[:email]) %></div>
 
   <ul>
     <li><%= @item[:subject] %></li>

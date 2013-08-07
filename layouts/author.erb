@@ -1,18 +1,27 @@
-<%  img_filename = "/photos/" + stripped_filename(@item) + ".jpg"
-    if File.exist?("content" + img_filename)
-%>
-      <img id="author-photo" src="<%= img_filename %>" alt="<%= @item[:title] %>"/>
+<% if File.exist?("content" + photo(@item)) %>
+  <img id="author-photo" src="<%= photo(@item) %>" alt="<%= @item[:title] %>"/>
 <% end %>
 
 <div id="author-info">
   <div id="name"><a href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
   <div id="email"><%= obfuscate_email(@item[:email]) %></div>
 
-  <ul>
-    <li><%= @item[:subject] %></li>
-    <li><%= @item[:university] %></li>
-    <li><%= @item[:country] %></li>
-    <% if @item[:period] %><li><%= @item[:period] %></li><% end %>
-  </ul>
-  <div id="blog"><a href="<%= @item[:link] %>">Блог</a></div>
+  <p>
+    <%= @item[:subject] %></br>
+    <%= @item[:university] %>
+  </p>
+
+  <%= @item[:country] %><%= ' ' + '(' + @item[:period] + ')' if @item[:period] %>
+  <!-- <div id="blog"><a href="<%= @item[:link] %>">Блог</a></div> -->
+</div>
+
+<div id="feed">
+  <% if @item[:feed]
+    feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed]) %>
+    <div id="feed-date-title-container">
+      <div id="feed-title"><a href="<%= feed.entries.first.url %>"><%= feed.entries.first.title %></a></div>
+      <div id="feed-data">(<%= feed.last_updated.to_s.split[0] %>) </div>
+    </div>
+    <div id="feed-content"><%= feed.entries.first.content %></div>
+  <% end %>
 </div>

@@ -15,4 +15,24 @@ module Utils
     %r".*/(?<stripped_filename>[^/.]+)" =~ item[:filename]
     return stripped_filename
   end
+
+  def photo(item)
+    return "/photos/" + stripped_filename(item) + ".jpg"
+  end
+
+  def feed_url(item)
+    link = item[:link]
+    #'feeds/posts/default' 
+    feed = FeedNormalizer::FeedNormalizer.parse open(feed_link)
+
+
+    feed.title # => "International Herald Tribune"
+    feed.url # => "http://www.iht.com/pages/index.php"
+    feed.entries.first.url # => "http://www.iht.com/articles/2006/10/03/frontpage/web.1003UN.php"
+
+    feed.class # => FeedNormalizer::Feed
+    feed.parser # => "RSS::Parser"
+
+    return feed.entries[2].content
+  end
 end

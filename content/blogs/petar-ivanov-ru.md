@@ -2,6 +2,7 @@
 title:      Петър Иванов
 country:    Русия
 link:       http://pesho.info/msu/
+feed:       http://pesho.info/feed/rss
 university: Московски държавен университет (МГУ)
 subject:    Приложна математика и информатика
 period:     2009--2014

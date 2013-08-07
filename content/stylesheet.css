@@ -7,6 +7,8 @@
 
 body {
   background: #fff;
+  position: fixed;
+  left: 50px;
 }
 
 a {
@@ -25,7 +27,7 @@ a:hover {
 #main {
   position: absolute;
   top: 40px;
-  left: 280px;
+  left: 270px;
   width: 500px;
 }
 
@@ -105,14 +107,13 @@ a:hover {
 }
 
 #main #author-info {
-  position: relative;
-  left: 10px;
+  position: absolute;
+  left: 160px;
 }
 
-#main #author-info ul li {
-  list-style-type: none;
-  #font-style: italic;
-  left: 10px;
+#main #author-info p {
+#  left: 10px;
+  font-size: 16px; 
 }
 
 #main #author-info #name {
@@ -133,6 +134,30 @@ a:hover {
   font-size: 20px;
   text-decoration: underline;
   left: 30px;
+}
+
+#feed {
+  position: absolute;
+  top: 220px; 
+  padding-right: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+#feed-date-title-container {
+  text-align: center;
+}
+
+#feed-title {
+  font-weight: bold;
+}
+
+#feed-date, #feed-title {
+  display: inline;
+}
+
+#feed-content {
+  font-style: italic;
 }
 
 #antispam {

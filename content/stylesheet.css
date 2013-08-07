@@ -77,7 +77,8 @@ a:hover {
 
 #sidebar ul {
   list-style-type: none;
-  margin: 20px 0;
+  margin-top: 8px;
+  margin-bottom: 25px;
 }
 
 #sidebar li {
@@ -114,13 +115,9 @@ a:hover {
 
 #main #author-info {
   position: absolute;
-  left: 160px;
+  left: 170px;
+  right: 0px;
   height: 200px;
-}
-
-#main #author-info p {
-#  left: 10px;
-  font-size: 16px; 
 }
 
 #main #author-info #name {
@@ -130,23 +127,40 @@ a:hover {
 }
 
 #main #author-info #email {
+  position: absolute;
+  left: 10px;
   font-size: 14px;
   color: #333;
   font-style: italic;
-  #padding-left: 10px;
 }
-
+/*
 #main #author-info #blog {
   font-weight: bold;
   font-size: 20px;
   text-decoration: underline;
   left: 30px;
 }
+*/
+#main #author-info #studies {
+  position: absolute;
+  font-size: 16px; 
+  font-weight: bold; 
+  bottom: 10px;
+}
+
+#main #author-info #studies #subject {
+  color: #2952CC;
+}
+
+#main #author-info #studies #university,
+#main #author-info #studies #country {
+  font-size: 16px; 
+}
 
 #feed {
   position: absolute;
-  top: 220px; 
-  padding-right: 10px;
+  top: 210px; 
+  padding-left: 10px;
   padding-right: 10px;
   text-align: center;
 }
@@ -166,7 +180,7 @@ a:hover {
   font-size: 13px;
   font-style: italic;
   vertical-align: super;
-  letter-spacing: -1px;
+  #letter-spacing: -1px;
 }
 
 #feed-subtitle, #feed-title {

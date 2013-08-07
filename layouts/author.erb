@@ -6,13 +6,11 @@
   <div id="name"><a href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
   <div id="email"><%= obfuscate_email(@item[:email]) %></div>
 
-  <p>
-    <%= @item[:subject] %></br>
-    <%= @item[:university] %>
-  </p>
-
-  <%= @item[:country] %><%= ' ' + '(' + @item[:period] + ')' if @item[:period] %>
-  <!-- <div id="blog"><a href="<%= @item[:link] %>">Блог</a></div> -->
+  <div id="studies">
+    <div id="subject"><%= @item[:subject] %></div>
+    <div id="university"><%= @item[:university] %></div>
+    <div id="country"><%= @item[:country] %><%= ', ' + @item[:period] if @item[:period] %></div>
+  </div>
 </div>
 
 <div id="feed">
@@ -23,7 +21,7 @@
     <div id="feed-container">
       <div id="feed-title"><a href="<%= feed.entries.first.url %>"><%= feed.entries.first.title %></a></div>
       <!-- <div id="feed-subtitle">(<%= feed.last_updated.to_s.split[0] %>) </div> -->
-      <div id="feed-subtitle">(топла информация)</div>
+      <div id="feed-subtitle">(най-ново)</div>
     </div>
     
     <div id="feed-content"><%=

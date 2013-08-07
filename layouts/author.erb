@@ -16,12 +16,24 @@
 </div>
 
 <div id="feed">
-  <% if @item[:feed]
-    feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed]) %>
-    <div id="feed-date-title-container">
+  <%
+    if @item[:feed]
+      feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed])
+  %>
+    <div id="feed-container">
       <div id="feed-title"><a href="<%= feed.entries.first.url %>"><%= feed.entries.first.title %></a></div>
-      <div id="feed-data">(<%= feed.last_updated.to_s.split[0] %>) </div>
+      <!-- <div id="feed-subtitle">(<%= feed.last_updated.to_s.split[0] %>) </div> -->
+      <div id="feed-subtitle">(топла информация)</div>
     </div>
-    <div id="feed-content"><%= feed.entries.first.content %></div>
+    
+    <div id="feed-content"><%=
+        maxlen = 300
+        brief = feed.entries.first.content[0..maxlen]   # crop not more than 300 chars
+        brief = brief.split(' ')[0..-2].join(' ')
+        Sanitize.clean(brief)
+      %>
+      <a href="<%= feed.entries.first.url %>"> [...]</a>
+    </div>
+
   <% end %>
 </div>

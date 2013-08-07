@@ -1,4 +1,5 @@
 ---
+hide:       true
 title:      Тихомир Недев
 country:    Англия
 link:       http://leicesterbg.blogspot.com/

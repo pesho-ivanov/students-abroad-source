@@ -8,7 +8,7 @@
 body {
   background: #fff;
   position: fixed;
-  left: 50px;
+  left: 10px;
 }
 
 a {
@@ -126,7 +126,7 @@ a:hover {
   font-size: 14px;
   color: #333;
   font-style: italic;
-  #padding-left: 10px
+  #padding-left: 10px;
 }
 
 #main #author-info #blog {
@@ -144,15 +144,25 @@ a:hover {
   text-align: center;
 }
 
-#feed-date-title-container {
+#feed-container {
   text-align: center;
+  #line-height: 40px;
+  margin: 10px;
 }
 
 #feed-title {
   font-weight: bold;
 }
 
-#feed-date, #feed-title {
+#feed-subtitle {
+  color: #333;
+  font-size: 13px;
+  font-style: italic;
+  vertical-align: super;
+  letter-spacing: -1px;
+}
+
+#feed-subtitle, #feed-title {
   display: inline;
 }
 

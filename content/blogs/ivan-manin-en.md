@@ -1,4 +1,5 @@
 ---
+hide:       true
 title:      Иван Мънин
 country:    Англия
 link:       http://bulgarianlancs.blogspot.com/

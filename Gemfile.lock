@@ -17,7 +17,10 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
+    sanitize (2.0.6)
+      nokogiri (>= 1.4.4)
     simple-rss (1.2.3)
+    truffle-hog (0.0.3)
 
 PLATFORMS
   ruby
@@ -28,3 +31,5 @@ DEPENDENCIES
   kramdown
   nanoc
   nokogiri
+  sanitize
+  truffle-hog

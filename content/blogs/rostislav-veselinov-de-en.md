@@ -1,4 +1,5 @@
 ---
+hide:       true
 title:      Ростислав Веселинов
 country:    Германия
 link:       http://germanyanduk.blogspot.com/

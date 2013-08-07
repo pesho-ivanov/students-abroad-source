@@ -2,7 +2,9 @@
 # before nanoc starts compiling.
 
 require 'open-uri'
-require 'feed-normalizer'
+require 'feed-normalizer'  # for parsing feeds
+require 'truffle-hog'      # for finding feeds
+require 'sanitize'         # sanitizing HTML
 
 include Nanoc::Helpers::Rendering
 include Utils 

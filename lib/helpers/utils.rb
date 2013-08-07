@@ -20,19 +20,31 @@ module Utils
     return "/photos/" + stripped_filename(item) + ".jpg"
   end
 
-  def feed_url(item)
-    link = item[:link]
-    #'feeds/posts/default' 
-    feed = FeedNormalizer::FeedNormalizer.parse open(feed_link)
+  def find_feed(url)
+    # get atom and rss
+    feed_urls = TruffleHog.parse_feed_urls(url)
+    puts feed_urls
+
+    return feed_urls
+  end
+
+  def get_feed(item)
+    #feed_url = find_feed(item[:link])
+    #feed_url = item[:feed]
+    #puts feed_url
+    #return feed_url
+
+    feed = FeedNormalizer::FeedNormalizer.parse open(feed_url)
+    return feed
 
 
-    feed.title # => "International Herald Tribune"
-    feed.url # => "http://www.iht.com/pages/index.php"
-    feed.entries.first.url # => "http://www.iht.com/articles/2006/10/03/frontpage/web.1003UN.php"
+    #feed.title # => "International Herald Tribune"
+    #feed.url # => "http://www.iht.com/pages/index.php"
+    #feed.entries.first.url # => "http://www.iht.com/articles/2006/10/03/frontpage/web.1003UN.php"
 
-    feed.class # => FeedNormalizer::Feed
-    feed.parser # => "RSS::Parser"
+    #feed.class # => FeedNormalizer::Feed
+    #feed.parser # => "RSS::Parser"
 
-    return feed.entries[2].content
+    #return feed.entries[2].content
   end
 end

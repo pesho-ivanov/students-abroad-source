@@ -90,6 +90,10 @@ a:hover {
   top: -15px;
 }
 
+#sidebar #banner img {
+  width: 130px;
+}
+
 #about-title {
   font-weight: bold;
   font-size: 24px;
@@ -98,7 +102,9 @@ a:hover {
 #main #author-photo {
   position: relative;
   #display: block;
-  max-width: 150px;
+  #max-width: 150px;
+  height: 200px;
+  width: auto;
   float: left;
 
   border-style: solid;
@@ -109,6 +115,7 @@ a:hover {
 #main #author-info {
   position: absolute;
   left: 160px;
+  height: 200px;
 }
 
 #main #author-info p {

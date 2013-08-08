@@ -2,13 +2,13 @@
   <div id="banner">
     <a href="/"><img src="/banner.png" alt="Начална страница"/></a>
   </div>
-  <h2>За проекта</h2>
+  <h2>Дружина</h2>
   <ul>
     <% for it in ["/about/", "/goals/", "/contacts/"] %>
       <li><a href=<%= it %>><%= @items[it][:title] %></a></li>
     <% end %>
   </ul>
-  <h2>Патиланци</h2>
+  <h2>Съмишленици</h2>
   <ul>
     <%
       @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog|

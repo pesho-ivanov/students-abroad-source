@@ -100,8 +100,12 @@ a:hover {
 }
 
 #about-title {
+  padding-right: 20px;
   font-weight: bold;
   font-size: 24px;
+  color: #2952CC;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
 }
 
 #main #author-photo {
@@ -125,10 +129,10 @@ a:hover {
 }
 
 #main #author-info #name {
-  display: inline-block;
   padding-right: 20px;
   font-weight: bold;
   font-size: 24px;
+  display: inline-block;
   border-bottom: 1px solid #ccc;
 }
 
@@ -148,12 +152,12 @@ a:hover {
 }
 
 #main #author-info #studies #subject {
-  display: inline-block;
   padding-right: 10px;
   position: relative;
   color: #2952CC;
   #line-height: 40px;
   bottom: 10px;
+  display: inline-block;
   border-bottom: 1px solid #ccc;
 }
 
@@ -185,7 +189,8 @@ a:hover {
 
 #feed-title #feed-subtitle {
   position: relative;
-  color: #f90;
+  color: #aaa;
+  #color: #f90;
   font-weight: normal;
   font-size: 12px;
   font-style: italic;

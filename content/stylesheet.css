@@ -62,7 +62,7 @@ a:hover {
   top: 40px;
   left: 20px;
   width: 200px;
-  height: 450px;
+  height: 550px;
   padding: 20px 20px 0 0;
   border-right: 1px solid #ccc;
   text-align: right;
@@ -128,7 +128,7 @@ a:hover {
 }
 
 #main #author-info #email {
-  position: absolute;
+  position: relative;
   left: 10px;
   font-size: 14px;
   color: #333;
@@ -146,12 +146,14 @@ a:hover {
   position: absolute;
   font-size: 16px; 
   font-weight: bold; 
-  bottom: 10px;
+  bottom: 5px;
 }
 
 #main #author-info #studies #subject {
+  position: relative;
   color: #2952CC;
   #line-height: 40px;
+  bottom: 10px;
 }
 
 #main #author-info #studies #university,
@@ -167,9 +169,10 @@ a:hover {
 }
 
 #feed-container {
+  position: relative;
   text-align: center;
-  #line-height: 40px;
-  margin: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 #feed-title {
@@ -177,7 +180,7 @@ a:hover {
 }
 
 #feed-subtitle {
-  color: #333;
+  color: #f90;
   font-size: 13px;
   font-style: italic;
   vertical-align: super;

@@ -18,20 +18,25 @@
     if @item[:feed]
       feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed])
   %>
-    <div id="feed-container">
-      <div id="feed-title"><a href="<%= feed.entries.first.url %>"><%= feed.entries.first.title %></a></div>
-      <!-- <div id="feed-subtitle">(<%= feed.last_updated.to_s.split[0] %>) </div> -->
-      <div id="feed-subtitle">(най-ново)</div>
-    </div>
-    
-    <div id="feed-content"><%=
-        maxlen = 300
-        brief = feed.entries.first.content[0..maxlen]   # crop not more than 300 chars
-        brief = brief.split(' ')[0..-2].join(' ')
-        Sanitize.clean(brief)
-      %>
-      <a href="<%= feed.entries.first.url %>"> [...]</a>
-    </div>
+    <% for i in 0..2
+      next if ! post = feed.entries[i]
+      
+      how_new = ['(най-ново)', '(почти ново)', '(просто ново)']
+    %>
+      <div id="feed-container">
+        <div id="feed-title"><a href="<%= post.url %>"><%= post.title %></a></div>
+        
+        <div id="feed-subtitle"><%= how_new[i] %></div>
 
+        <div id="feed-content"><%=
+            maxlen = 300
+            brief = post.content[0..maxlen]   # crop not more than 300 chars
+            brief = brief.split(' ')[0..-2].join(' ')
+            Sanitize.clean(brief)
+          %>
+          <a href="<%= post.url %>"> [...]</a>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>

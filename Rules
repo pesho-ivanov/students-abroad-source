@@ -25,11 +25,10 @@ compile '*' do
   else
     case item[:extension]
       when 'css'
-      #  filter :relativize_paths, :type => :css
       else
         filter :erb
         filter :kramdown, :auto_ids => false
-      #  filter :relativize_paths, :type => :html
+        filter :rubypants
     end
 
     layout 'default'

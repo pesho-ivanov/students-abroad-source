@@ -3,14 +3,15 @@
   <%= render 'header' %>
   <body>
     <div id="main">
-      <%=
-        if %r"^/blogs/.*/$" =~ @item.identifier
-          render 'author'
-        else
-          render 'about'
-        end
-      %>
-      <%= yield %>
+      <% if %r"^/blogs/.*/$" =~ @item.identifier %>
+          <%= render 'author' %>
+          <%= yield %>
+      <% else %>
+          <div id="about">
+            <%= render 'about' %>
+            <%= yield %>
+          </div>
+      <% end %>
     </div>
     <%= render 'sidebar' %>
   </body>

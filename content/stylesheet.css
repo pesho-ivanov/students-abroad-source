@@ -55,11 +55,6 @@ a:hover {
   line-height: 20px;
 }
 
-#main ul li {
-  font-weight: bold;
-  list-style-type: square;
-}
-
 #sidebar {
   position: absolute;
   top: 40px;
@@ -97,6 +92,20 @@ a:hover {
 
 #sidebar #banner img {
   width: 130px;
+}
+
+#main #about {
+  margin-right: 100px;
+}
+
+#main #about blockquote {
+  font-style: italic;
+  margin-left: 20px;
+}
+
+#main #about p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #about-title {

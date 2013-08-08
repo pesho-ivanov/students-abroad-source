@@ -62,6 +62,7 @@ a:hover {
   top: 40px;
   left: 20px;
   width: 200px;
+  height: 450px;
   padding: 20px 20px 0 0;
   border-right: 1px solid #ccc;
   text-align: right;
@@ -150,11 +151,11 @@ a:hover {
 
 #main #author-info #studies #subject {
   color: #2952CC;
+  #line-height: 40px;
 }
 
 #main #author-info #studies #university,
 #main #author-info #studies #country {
-  font-size: 16px; 
 }
 
 #feed {

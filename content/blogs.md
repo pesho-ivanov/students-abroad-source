@@ -1,5 +1,5 @@
 ---
-title: A New Item
+title: Блогове
 ---
 
-Hi, I'm a new item!
+Празна страничка

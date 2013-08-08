@@ -8,7 +8,7 @@
       <li><a href=<%= it %>><%= @items[it][:title] %></a></li>
     <% end %>
   </ul>
-  <h2>Разказвачи</h2>
+  <h2>Патиланци</h2>
   <ul>
     <%
       @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog|

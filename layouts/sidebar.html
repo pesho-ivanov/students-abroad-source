@@ -5,7 +5,7 @@
   <h2>Дружина</h2>
   <ul>
     <% for it in ["/about/", "/goals/", "/contacts/"] %>
-      <li><a href=<%= it %>><%= @items[it][:title] %></a></li>
+      <li><a class="under" href=<%= it %>><%= @items[it][:title] %></a></li>
     <% end %>
   </ul>
   <h2>Съмишленици</h2>
@@ -14,7 +14,7 @@
       @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog|
         if !blog[:hide]
     %>
-        <li><a href= <%= blog.identifier %> ><%= blog[:title].split(' ')[0] + ' (' + blog[:country] + ')' %></a></li>
+        <li><a class="under" href= <%= blog.identifier %> ><%= blog[:title].split(' ')[0] + ' (' + blog[:country] + ')' %></a></li>
       <% end %>
     <% end %>
   </ul>

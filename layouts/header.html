@@ -1,21 +1,35 @@
-<head>
-  <meta charset="utf-8">
-  <title> Съмишленици – <%= @item[:title] %> </title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="utf-8">
+<title> Съмишленици – <%= @item[:title] %> </title>
+<link rel="stylesheet" href="/style.css">
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $.event.add(window, "load", resizeContent);
+    $.event.add(window, "resize", resizeContent);
 
-    ga('create', 'UA-42975539-1', 'students-abroad.info');
-    ga('send', 'pageview');
-  </script>
+    function resizeContent() {
+        var h = $(window).height();
+        var w = $(window).width();
+        $(".content").css('min-height', (h-210));
+        $(".footer").css('display', 'block');
+    }
 
-  <!-- you don't need to keep this, but it's cool for stats! -->
-  <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
-</head>
+    resizeContent();
+</script>
+-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42975539-1', 'students-abroad.info');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 

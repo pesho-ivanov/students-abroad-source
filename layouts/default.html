@@ -1,18 +1,26 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <%= render 'header' %>
+  <head>
+    <%= render 'header' %>
+  </head>
   <body>
-    <div id="main">
-      <% if %r"^/blogs/.*/$" =~ @item.identifier %>
-          <%= render 'author' %>
-          <%= yield %>
-      <% else %>
-          <div id="about">
-            <%= render 'about' %>
+    <div class="content">
+      <div id="main">
+        <% if %r"^/blogs/.*/$" =~ @item.identifier %>
+            <%= render 'author' %>
+            <%= render 'feed' %>
             <%= yield %>
-          </div>
-      <% end %>
+        <% else %>
+            <div id="about">
+              <%= render 'about' %>
+              <%= yield %>
+            </div>
+        <% end %>
+      </div>
+      <%= render 'sidebar' %>
     </div>
-    <%= render 'sidebar' %>
   </body>
+  <div class='footer'>
+    <%= render 'footer' %>
+  </div>
 </html>

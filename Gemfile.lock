@@ -9,14 +9,24 @@ GEM
     feed-normalizer (1.5.2)
       hpricot (>= 0.6)
       simple-rss (>= 1.1)
+    ffi (1.9.0)
     hpricot (0.8.6)
     kramdown (1.1.0)
+    listen (1.2.2)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      rb-kqueue (>= 0.2)
     mini_portile (0.5.1)
     nanoc (3.6.4)
       cri (~> 2.3)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
+    rb-fsevent (0.9.3)
+    rb-inotify (0.9.0)
+      ffi (>= 0.5.0)
+    rb-kqueue (0.2.0)
+      ffi (>= 0.5.0)
     rubypants (0.2.0)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
@@ -30,6 +40,7 @@ DEPENDENCIES
   adsf
   feed-normalizer
   kramdown
+  listen
   nanoc
   nokogiri
   rubypants

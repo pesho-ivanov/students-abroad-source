@@ -3,7 +3,7 @@
 <% end %>
 
 <div id="author-info">
-  <div id="name"><a href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
+  <div id="name"><a class="under" href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
   <div id="email"><%= obfuscate_email(@item[:email]) %></div>
 
   <div id="studies">
@@ -23,27 +23,26 @@
       
         how_new = ['(най-ново)', '(почти ново)', '(просто ново)']
     %>
-      <div id="feed-container">
-        <div id="feed-title">
-          <a href="<%= post.url %>"><%= post.title %></a>
-          <div id="feed-subtitle"><%= how_new[i] %></div>
-        </div>
+      <div class="feed-container">
+        <a class="under" href="<%= post.url %>"><%= post.title %></a>
+        <span class="feed-subtitle"><%= how_new[i] %></span>
 
-        <div id="feed-content"><%=
+        <div class="feed-content"><%=
             maxlen = 220
             brief = Sanitize.clean(post.content[0..2*maxlen])
             brief = brief[0..maxlen]   # crop not more than 300 chars
             brief.split(' ')[0..-2].join(' ')
           %>
-          <a href="<%= post.url %>"> [...]</a>
+          <a href="<%= post.url %>">[...]</a>
         </div>
       </div>
     <% end %>
 
     <% if feed.entries[3..-1] %>
-      <div id="feed-older-subtitle">И малко по-стари: </div>
+      <span class="feed-older-subtitle">Малко по-стари: </span>
       <% feed.entries[3..-1].each_with_index { |post, i| %>
-        <a href="<%= post.url %>"><%= post.title %></a><%= (i<feed.entries.size-4 ? ', ' : '') %><% } %>
+        &nbsp<a class="under" href="<%= post.url %>"><%= post.title %></a><%= (i<feed.entries.size-4 ? ', ' : '') %>
+      <% } %>
     <% end %>
   <% end %>
 </div>

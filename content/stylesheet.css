@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  color: #333;
   background: #fff;
   position: fixed;
   #left: 100px;
@@ -147,7 +148,6 @@ a:hover {
   font-weight: bold;
   font-size: 24px;
   display: inline-block;
-  border-bottom: 1px solid #ccc;
 }
 
 #main #author-info #email {
@@ -161,18 +161,17 @@ a:hover {
 #main #author-info #studies {
   position: absolute;
   font-size: 16px; 
-  font-weight: bold; 
   bottom: 5px;
 }
 
 #main #author-info #studies #subject {
-  padding-right: 10px;
   position: relative;
-  color: #2952CC;
+  padding-right: 10px;
+  font-weight: bold; 
+  #color: #2952CC;
   #line-height: 40px;
   bottom: 10px;
   display: inline-block;
-  border-bottom: 1px solid #ccc;
 }
 
 #main #author-info #studies #university,
@@ -182,49 +181,55 @@ a:hover {
 #feed {
   position: absolute;
   top: 210px; 
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
+  #padding-left: 15px;
+  #padding-right: 15px;
+  #text-align: center;
 }
 
-#feed-container {
+.feed-container {
   position: relative;
-  text-align: center;
+  #text-align: center;
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-#feed-title {
+.feed-containder .under {
   position: relative;
+  float: left;
   font-weight: bold;
-  left: 15px;
-  right: 15px;
+  #left: 15px;
+  #right: 15px;
 }
 
-#feed-title #feed-subtitle {
+.under:link,
+.under:visited {
+  border-bottom: 1px solid #FCB;
+}
+
+.under:hover {
+  border-bottom: 1px solid #F90;
+}
+
+.feed-content {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.feed-subtitle {
   position: relative;
-  color: #aaa;
+  color: #888;
   #color: #f90;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 11px;
   font-style: italic;
   vertical-align: super;
   #letter-spacing: -1px;
 }
 
-#feed-subtitle, #feed-title {
-  display: inline;
-}
-
-#feed-content {
-  font-style: italic;
-  font-size: 15px;
-}
-
-#feed-older-subtitle {
+.feed-older-subtitle {
   margin-top: 15px;
   display: inline-block;
-  #color: #aaa;
+  color: #888;
   font-style: italic;
   font-size: 14px;
 }

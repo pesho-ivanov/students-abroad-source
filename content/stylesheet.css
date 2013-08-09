@@ -12,7 +12,7 @@ html {
 body {
   color: #333;
   background: #fff;
-  position: fixed;
+  position: absolute;
   #left: 100px;
   left: 50%;
   margin-left: -470px;

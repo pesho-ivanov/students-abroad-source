@@ -138,7 +138,7 @@ a:hover {
 }
 
 #about-title {
-  padding-right: 20px;
+  #padding-right: 20px;
   font-weight: bold;
   font-size: 24px;
   color: #25C;
@@ -217,14 +217,6 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.feed-containder .under {
-  position: relative;
-  float: left;
-  font-weight: bold;
-  #left: 15px;
-  #right: 15px;
-}
-
 .feed-content {
   font-style: italic;
   font-size: 15px;
@@ -234,7 +226,7 @@ a:hover {
   position: relative;
   color: #888;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 12px;
   font-style: italic;
   vertical-align: super;
   #letter-spacing: -1px;
@@ -273,10 +265,6 @@ html, body {
 }
 
 
-
-.content {
-  width: 800;
-}
 
 .small {
   font-size: 12px;

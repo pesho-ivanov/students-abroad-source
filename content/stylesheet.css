@@ -5,6 +5,10 @@
   font-family: Ubuntu, Georgia, Palatino, Times, 'Times New Roman', sans-serif;
 }
 
+html {
+  overflow: scroll;
+}
+
 body {
   background: #fff;
   position: fixed;
@@ -28,7 +32,7 @@ a:hover {
 
 #main {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 270px;
   width: 600px;
 }
@@ -57,7 +61,7 @@ a:hover {
 
 #sidebar {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 20px;
   width: 200px;
   height: 600px;
@@ -123,7 +127,7 @@ a:hover {
   #max-width: 150px;
   height: 200px;
   width: auto;
-  float: left;
+  #float: left;
 
   border-style: solid;
   border-width: 1px;
@@ -132,6 +136,7 @@ a:hover {
 
 #main #author-info {
   position: absolute;
+  top: 0px;
   left: 170px;
   right: 0px;
   height: 200px;
@@ -213,6 +218,15 @@ a:hover {
 
 #feed-content {
   font-style: italic;
+  font-size: 15px;
+}
+
+#feed-older-subtitle {
+  margin-top: 15px;
+  display: inline-block;
+  #color: #aaa;
+  font-style: italic;
+  font-size: 14px;
 }
 
 #antispam {

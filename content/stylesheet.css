@@ -45,15 +45,22 @@ a {
   text-decoration: none;
 }
 
-a:link,
-a:visited {
+a:link {
   color: #f30;
+  border-bottom: 1px solid #fcb;
 }
 
+a:visited,
 a:hover {
-  #color: #f90;
+  color: #f30;
+  border-bottom: 1px solid #f30;
 }
 
+.nounder {
+  border-bottom: none !important;
+}
+
+/*
 .under:link,
 .under:visited {
   border-bottom: 1px solid #fcb;
@@ -62,9 +69,8 @@ a:hover {
 .under:hover {
   #border-bottom: 1px solid #fc8;
   border-bottom: 1px solid #f30;
-  left: 50%;
-  right: 0;
 }
+*/
 
 #main {
   position: absolute;

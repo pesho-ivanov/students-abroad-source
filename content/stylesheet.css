@@ -32,7 +32,7 @@ body {
   background: #fff;
   #left: 100px;
   left: 50%;
-  margin-left: -450px;
+  margin-left: -430px;
   width: 900px;
 }
 
@@ -46,7 +46,7 @@ a:visited {
 }
 
 a:hover {
-  color: #f90;
+  #color: #f90;
 }
 
 .under:link,
@@ -55,7 +55,8 @@ a:hover {
 }
 
 .under:hover {
-  border-bottom: 1px solid #fc8;
+  #border-bottom: 1px solid #fc8;
+  border-bottom: 1px solid #f30;
   left: 50%;
   right: 0;
 }
@@ -63,12 +64,12 @@ a:hover {
 #main {
   position: absolute;
   top: 20px;
-  left: 270px;
+  left: 250px;
   width: 600px;
 }
 
 #main h1 {
-  font-size: 40px;
+  font-size: style="top: -15px;" 40px;
   font-weight: normal;
   line-height: 40px;
   letter-spacing: -1px;
@@ -93,7 +94,7 @@ a:hover {
   position: absolute;
   top: 20px;
   left: 0px;
-  width: 230px;
+  width: 200px;
   height: 600px;
   padding: 20px 20px 0 0;
   border-right: 1px solid #ccc;
@@ -273,29 +274,32 @@ html, body {
   height: 50px;
 }
 
-.transparent {
-  opacity: 0.4;
-  filter: alpha(opacity=40);
+.license {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }
 
-img:hover .transparent {
+.license:hover {
   opacity: 1.0;
   filter: alpha(opacity=100);
 }
 
 .small {
-  font-size: 11px;
-  color: #bbb;
+  position: relative;
+  font-size: 12px;
+  left: 10px;
+  #color: #bbb;
 }
 
+/*
 .small a:link,
 .small a:visited {
-  color: #aaa;
-  border-bottom: 1px solid #ccc;
+  #color: #aaa;
+  #border-bottom: 1px solid #ccc;
 }
 
 .small a:hover {
-  color: #f90;
-  border-bottom: 1px solid #fc8;
+  #color: #f90;
+  #border-bottom: 1px solid #fc8;
 }
-
+*/

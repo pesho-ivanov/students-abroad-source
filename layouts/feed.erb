@@ -8,9 +8,9 @@
       
         how_new = ['(най-ново)', '(почти ново)', '(просто ново)']
     %>
-      <div class="feed-container" class="nshowhim">
+      <div class="feed-container">
         <a class="under" href="<%= post.url %>"><%= Sanitize.clean(post.title[0..150]) %></a>
-        <div class="feed-subtitle" class="showme"><%= how_new[i] %></div>
+        <span class="feed-subtitle"><%= how_new[i] %></span>
 
         <div class="feed-content"><%=
             maxlen = 220

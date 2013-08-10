@@ -36,6 +36,11 @@ body {
   width: 900px;
 }
 
+html, body {
+  height: 100%;
+  min-height: 800px;
+}
+
 a {
   text-decoration: none;
 }
@@ -256,22 +261,18 @@ a:hover {
   display : block;
 }
 
-
-html, body {
-  height: 100%;
-}
 .content {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -50px; 
+  margin-bottom: -80px; 
 }
 .content:after {
-  content: "";
+  content: ".";
   display: block;
 }
 .footer, .content:after {
   /* .push must be the same height as footer */
-  height: 50px;
+  height: 80px;
 }
 
 .license {

@@ -158,9 +158,9 @@ a:hover {
   padding-right: 30px;
   font-weight: bold;
   font-size: 24px;
-  color: #591;
   display: inline-block;
-  border-bottom: 1px solid #ac8;
+  #color: #591;
+  #border-bottom: 1px solid #ac8;
 }
 
 #main #author-photo {

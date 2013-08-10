@@ -8,7 +8,11 @@ light grey   -- #ccc
 light yellow -- #fc8
  dark red    -- #f30
 light red    -- #fcb
- dark blue   -- #25c
+ dark green  -- #591
+light green  -- #ac8
+
+// dark blue   -- #25c
+
 */
 
 * {
@@ -28,7 +32,8 @@ body {
   background: #fff;
   #left: 100px;
   left: 50%;
-  margin-left: -470px;
+  margin-left: -450px;
+  width: 900px;
 }
 
 a {
@@ -87,8 +92,8 @@ a:hover {
 #sidebar {
   position: absolute;
   top: 20px;
-  left: 20px;
-  width: 200px;
+  left: 0px;
+  width: 230px;
   height: 600px;
   padding: 20px 20px 0 0;
   border-right: 1px solid #ccc;
@@ -138,12 +143,12 @@ a:hover {
 }
 
 #about-title {
-  #padding-right: 20px;
+  padding-right: 30px;
   font-weight: bold;
   font-size: 24px;
-  color: #25C;
+  color: #591;
   display: inline-block;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ac8;
 }
 
 #main #author-photo {
@@ -178,7 +183,7 @@ a:hover {
   position: relative;
   left: 10px;
   font-size: 14px;
-  color: #333;
+  color: #353;
   font-style: italic;
 }
 
@@ -192,7 +197,6 @@ a:hover {
   position: relative;
   padding-right: 10px;
   font-weight: bold; 
-  #color: #25C;
   #line-height: 40px;
   bottom: 10px;
   display: inline-block;
@@ -244,7 +248,12 @@ a:hover {
   display: none;
 }
 
-
+.showme{ 
+  display: none;
+}
+.showhim:hover >.showme{
+  display : block;
+}
 
 
 html, body {
@@ -264,10 +273,18 @@ html, body {
   height: 50px;
 }
 
+.transparent {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
 
+img:hover .transparent {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
 
 .small {
-  font-size: 12px;
+  font-size: 11px;
   color: #bbb;
 }
 

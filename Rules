@@ -19,6 +19,9 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile '/README/' do
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -40,6 +43,10 @@ end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+route '/README/' do
+  '/README.markdown'
 end
 
 route '*' do

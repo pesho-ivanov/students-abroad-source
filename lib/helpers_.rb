@@ -4,7 +4,7 @@
 #require 'open-uri'
 #require 'feed-normalizer'  # for parsing feeds
 #require 'truffle-hog'      # for finding feeds
-require 'sanitize'         # sanitizing HTML
+#require 'sanitize'         # sanitizing HTML
 require 'feedzirra'        # for parsing and aggregating feeds
 
 include Nanoc::Helpers::Rendering

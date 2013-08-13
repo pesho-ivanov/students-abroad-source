@@ -1,7 +1,8 @@
 <div id="feed">
   <%
     if @item[:feed]
-      feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed])
+      feed = Feedzirra::Feed.fetch_and_parse(@item[:feed])
+      #feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed])
   %>
     <% for i in 0..2
         break if ! post = feed.entries[i]
@@ -14,9 +15,11 @@
 
         <div class="feed-content"><%=
             maxlen = 220
-            brief = Sanitize.clean(post.content[0..2*maxlen])
-            brief = brief[0..maxlen]   # crop not more than 300 chars
-            brief.split(' ')[0..-2].join(' ')
+            if post.content != nil
+              brief = Sanitize.clean(post.content[0..2*maxlen])
+              brief = brief[0..maxlen]   # crop not more than 300 chars
+              brief.split(' ')[0..-2].join(' ')
+            end
           %>
           <a href="<%= post.url %>">[...]</a>
         </div>

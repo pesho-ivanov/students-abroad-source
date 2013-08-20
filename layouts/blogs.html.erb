@@ -1,0 +1,6 @@
+<% @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog| %>
+  <% if !blog[:hide] %>
+    <%= render 'author', :item => blog %>
+  <% end %>
+<% end %>
+

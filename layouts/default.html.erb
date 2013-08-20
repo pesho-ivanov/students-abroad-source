@@ -10,6 +10,9 @@
             <%= render 'author' %>
             <%= render 'feed' %>
             <%= yield %>
+        <% elsif "/blogs/" == @item.identifier %>
+            <%= render 'blogs' %>
+            <%= yield %>
         <% else %>
             <div id="about">
               <%= render 'about' %>

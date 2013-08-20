@@ -1,15 +1,15 @@
-<% if File.exist?("content" + photo(@item)) %>
-  <img id="author-photo" src="<%= photo(@item) %>" alt="<%= @item[:title] %>"/>
-<% end %>
+<div class="author-info">
+  <% if File.exist?("content" + photo(@item)) %>
+    <img class="author-photo" src="<%= photo(@item) %>" alt="<%= @item[:title] %>"/>
+  <% end %>
 
-<div id="author-info">
-  <div id="name"><a class="under" href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
-  <div id="email"><%= obfuscate_email(@item[:email]) %></div>
+  <div class="name"><a class="under" href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
+  <div class="email"><%= obfuscate_email(@item[:email]) %></div>
 
-  <div id="studies">
-    <div id="subject"><%= @item[:subject] %></div>
-    <div id="university"><%= @item[:university] %></div>
-    <div id="country"><%= @item[:country] %><%= ', ' + @item[:period] if @item[:period] %></div>
+  <div class="studies">
+    <div class="subject"><%= @item[:subject] %></div>
+    <div class="university"><%= @item[:university] %></div>
+    <div class="country"><%= @item[:country] %><%= ', ' + @item[:period] if @item[:period] %></div>
   </div>
 </div>
 

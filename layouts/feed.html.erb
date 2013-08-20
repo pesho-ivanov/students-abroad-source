@@ -10,13 +10,13 @@
         how_new = ['(най-ново)', '(почти ново)', '(просто ново)']
     %>
       <div class="feed-container">
-        <a class="under" href="<%= post.url %>"><%= post.title[0..150].sanitize %></a>
+        <a class="under" href="<%= post.url %>"><%= Sanitize.clean(post.title[0..150]) %></a>
         <span class="feed-subtitle"><%= how_new[i] %></span>
 
         <div class="feed-content"><%=
             maxlen = 220
             if post.content != nil
-              brief = post.content[0..2*maxlen].sanitize
+              brief = Sanitize.clean(post.content[0..2*maxlen])
               brief = brief[0..maxlen]   # crop not more than 300 chars
               brief.split(' ')[0..-2].join(' ')
             end

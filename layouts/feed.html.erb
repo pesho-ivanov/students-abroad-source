@@ -26,7 +26,7 @@
       </div>
     <% end %>
 
-    <% if feed.entries[3..-1] %>
+    <% if feed.entries.size > 3 %>
       <span class="feed-older-subtitle">Малко по-стари:&nbsp</span>
       <% feed.entries[3..-1].each_with_index { |post, i| %>
         <a class="under" href="<%= post.url %>"><%= post.title %></a><%= (i<feed.entries.size-4 ? ',&nbsp' : '') %>

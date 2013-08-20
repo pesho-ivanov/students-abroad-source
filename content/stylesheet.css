@@ -273,7 +273,7 @@ a:hover {
   margin-bottom: -80px; 
 }
 .content:after {
-  content: ".";
+  #content: ".";
   display: block;
 }
 .footer, .content:after {

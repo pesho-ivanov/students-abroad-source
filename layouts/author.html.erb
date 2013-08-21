@@ -3,7 +3,7 @@
     <img class="author-photo" src="<%= photo(@item) %>" alt="<%= @item[:title] %>"/>
   <% end %>
 
-  <div class="name"><a class="under" href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
+  <div class="name"><a class="novisited" href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
   <div class="email"><%= obfuscate_email(@item[:email]) %></div>
 
   <div class="studies">

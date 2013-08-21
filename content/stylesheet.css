@@ -6,6 +6,7 @@ light grey   -- #ccc
 
  dark yellow -- #f90
 light yellow -- #fc8
+very dark red -- #710
  dark red    -- #f30
 light red    -- #fcb
  dark green  -- #591
@@ -50,8 +51,22 @@ a:link {
   border-bottom: 1px solid #fcb;
 }
 
-a:visited,
+a:visited {
+  color: #943;
+  border-bottom: 1px solid #fcb;
+}
+
 a:hover {
+  color: #f30;
+  border-bottom: 1px solid #f30;
+}
+
+a.novisited:visited {
+  color: #f30;
+  border-bottom: 1px solid #fcb;
+}
+
+a.novisited:hover {
   color: #f30;
   border-bottom: 1px solid #f30;
 }
@@ -59,18 +74,6 @@ a:hover {
 .nounder {
   border-bottom: none !important;
 }
-
-/*
-.under:link,
-.under:visited {
-  border-bottom: 1px solid #fcb;
-}
-
-.under:hover {
-  #border-bottom: 1px solid #fc8;
-  border-bottom: 1px solid #f30;
-}
-*/
 
 #main {
   #position: absolute;

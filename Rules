@@ -22,6 +22,9 @@ end
 compile '/README/' do
 end
 
+compile '/404/' do
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -47,6 +50,10 @@ end
 
 route '/README/' do
   '/README.markdown'
+end
+
+route '/404/' do
+  '/404.html'
 end
 
 route '*' do

@@ -13,6 +13,10 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+#  fetch_feeds
+end
+
 # COMPILE
 
 compile '/stylesheet/' do

@@ -2,7 +2,6 @@
   <%
     if @item[:feed]
       feed = Feedzirra::Feed.fetch_and_parse(@item[:feed])
-      #feed = FeedNormalizer::FeedNormalizer.parse open(@item[:feed])
       #feed = []
   %>
     <% for i in 0..2

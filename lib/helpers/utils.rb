@@ -28,15 +28,30 @@ module Utils
     return feed_urls
   end
 
-  def get_feed(item)
+  def fetch_feeds()
+    return
+
+    feed_links = [] 
+    @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog|
+      if !blog[:hide]
+        feed_links.push(blog[:feed])
+      end
+    end
+
+    print feed_links
+    feeds = Feedzirra::Feed.fetch_and_parse(feed_links)
+
+    #feeds.each do |feed_url, feed, blog|
+    #  print blog[:feed] 
+    #end 
+
     #feed_url = find_feed(item[:link])
     #feed_url = item[:feed]
     #puts feed_url
     #return feed_url
+    #feed = FeedNormalizer::FeedNormalizer.parse open(feed_url)
 
-    feed = FeedNormalizer::FeedNormalizer.parse open(feed_url)
-    return feed
-
+    #return feed
 
     #feed.title # => "International Herald Tribune"
     #feed.url # => "http://www.iht.com/pages/index.php"

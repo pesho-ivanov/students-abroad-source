@@ -86,4 +86,10 @@ module Utils
 
     #return feed.entries[2].content
   end
+
+  def bgtime()
+    bgtime = Timezone::Zone.new :zone => 'Europe/Sofia'; 
+    time = bgtime.time Time.now
+    time.strftime("%d.%m.%Y %H:%M") + ' ' + 'BGT'
+  end
 end

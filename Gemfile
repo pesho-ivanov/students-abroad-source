@@ -11,4 +11,4 @@ gem 'nokogiri'          # for parsing HTML
 gem 'sanitize'          # sanitizing HTML
 gem 'rubypants'         # for beautiful typography in HTML
 gem 'feedzirra'         # for parsing and aggregating feeds
-
+gem 'timezone'          # for the correct BG time

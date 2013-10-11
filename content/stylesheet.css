@@ -144,6 +144,12 @@ a.novisited:hover {
   width: 130px;
 }
 
+#sidebar .time {
+  color: #888;
+  font-size: 11px;
+  line-height: 10px;
+}
+
 #main #about {
   margin-right: 100px;
 }

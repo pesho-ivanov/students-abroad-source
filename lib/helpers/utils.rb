@@ -20,6 +20,30 @@ module Utils
     return "/photos/" + stripped_filename(item) + ".jpg"
   end
 
+  def firstname(blog)
+    blog[:title].split(' ')[0]
+  end
+
+  def surname(blog)
+    blog[:title].split(' ')[1]
+  end
+
+  def bg_vowel?(c)
+    'аъоуеи'.include?(c)
+  end
+
+  def shortsurname(blog)
+    sn = surname(blog)
+    sn[0] + ( bg_vowel?(sn[1]) ? '' : sn[1] ) + '.' 
+  end
+
+  def shortname(blog)
+    firstname(blog) + (
+      1 == @items['/blogs/'].children.count { |other_blog| firstname(blog) == firstname(other_blog) } ?
+      '' : ' ' + shortsurname(blog)
+    ) 
+  end
+
   def find_feed(url)
     # get atom and rss
     feed_urls = TruffleHog.parse_feed_urls(url)

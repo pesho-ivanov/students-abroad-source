@@ -10,9 +10,11 @@
   </ul>
   <h2>Съмишленици</h2>
   <ul>
-    <% @items['/blogs/'].children.sort_by { |blog| blog[:title] }.each do |blog| %>
+    <% @items['/blogs/'].children.sort_by { |blog| blog[:country] + blog[:title] }.each do |blog| %>
       <% if !blog[:hide] %>
-        <li><a class="novisited" href= <%= blog.identifier %> ><%= blog[:title].split(' ')[0] + ' (' + blog[:country] + ')' %></a></li>
+        <li><a class="novisited" href= <%= blog.identifier %> >
+          <%= shortname(blog) + ' (' + blog[:country] + ')' %>
+        </a></li>
       <% end %>
     <% end %>
   </ul>

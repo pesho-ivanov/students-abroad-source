@@ -8,11 +8,11 @@
       <li><a class="novisited" href=<%= it %>><%= @items[it][:title] %></a></li>
     <% end %>
   </ul>
-  <h2>Съмишленици</h2>
+  <h2><a class="headinglink" href="/blogs/">Съмишленици</a></h2>
   <ul>
     <% @items['/blogs/'].children.sort_by { |blog| blog[:country] + blog[:title] }.each do |blog| %>
       <% if !blog[:hide] %>
-        <li><a class="novisited" href= <%= blog.identifier %> >
+        <li><a href= <%= blog.identifier %> >
           <%= shortname(blog) + ' (' + blog[:country] + ')' %>
         </a></li>
       <% end %>

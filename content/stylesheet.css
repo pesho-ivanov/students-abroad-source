@@ -41,7 +41,7 @@ html, body {
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 90px;
-  width: 900px;
+  width: 800px;
 }
 
 .clearer {
@@ -247,11 +247,7 @@ a.novisited:hover {
 }
 
 #feed {
-  position: absolute;
-  top: 210px; 
-  #padding-left: 15px;
-  #padding-right: 15px;
-  #text-align: center;
+  margin-top: 20px;
 }
 
 .feed-container {

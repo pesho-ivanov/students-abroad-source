@@ -3,7 +3,10 @@
     <img class="author-photo" src="<%= photo(@item) %>" alt="<%= @item[:title] %>"/>
   <% end %>
 
-  <div class="name"><a class="novisited" href="<%= @item[:link] %>"><%= @item[:title] %></a></div>
+  <div class="name">
+    <a class="novisited" href="<%= @item[:link] %>"><%= @item[:title] %></a>
+    <a class="nounder" href="<%= @item[:feed] %>"><img src="/rss-feed.png" title="RSS от <%= @item[:title] %>" class="rssicon"/></a>
+  </div>
   <div class="email"><%= obfuscate_email(@item[:email]) %></div>
 
   <div class="studies">

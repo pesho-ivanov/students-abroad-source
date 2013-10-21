@@ -16,5 +16,10 @@ secure_copy:
 view:
 	nanoc view
 
+aco:
+	guard &
+
 publish: compile secure_copy
-run: compile view
+
+run: aco view
+

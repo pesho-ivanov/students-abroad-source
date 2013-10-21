@@ -1,6 +1,7 @@
 source :rubygems
 
-gem 'listen'            # for autocompilation 
+#gem 'listen'            # for autocompilation 
+gem 'guard-nanoc'       # for autocompilation 
 gem 'nanoc'             # for compiling the site
 
 gem 'adsf'              # for viewing
